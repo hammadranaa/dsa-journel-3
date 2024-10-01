@@ -11,13 +11,13 @@ stack::stack()
 
 void stack::isEmpty()
 {
-	if (head == NULL)  
+	if (head == NULL) 
 	{
-		cout << "Stack is empty"<<endl;  
+		cout << "Stack is empty\n"; 
 	}
 	else
 	{
-		cout << "stack is not empty" << endl;
+		cout << "stack is not empty\n";
 
 	}
 
@@ -30,12 +30,12 @@ void stack::push(int a)
 	if (head == NULL)
 	{
 
-		head = new_node; 
+		head = new_node;  
 	}
 	else
 	{
 
-		new_node->next = head;  
+		new_node->next = head; 
 
 		head = new_node;  
 
@@ -55,7 +55,7 @@ int stack::peek()
 	}
 	else
 	{
-		return head->data; 
+		return head->data;  
 	}
 
 
@@ -72,10 +72,9 @@ int stack::pop()
 	{
 		int val = head->data; 
 		node* temp = head;  
-
-		head = head->next;  
+		head = head->next; 
 		delete temp; 
-		return val; 
+		return val;
 	}
 
 
@@ -84,7 +83,7 @@ int stack::pop()
 int stack::size()
 {
 	int count = 0;
-	node* current = head; 
+	node* current = head;  
 
 	if (head == NULL)
 	{
@@ -95,7 +94,7 @@ int stack::size()
 	{
 		while (current != NULL)
 		{
-			count++;  
+			count++; 
 			current = current->next; 
 
 
@@ -120,7 +119,7 @@ void stack::print()
 	}
 	else
 	{
-		bool changes = false;  
+		bool changes = false; 
 		node* current = head;
 		int temp; 
 
@@ -128,14 +127,13 @@ void stack::print()
 		{
 			if (current->data > current->next->data)  
 			{
-				temp = current->data;  
+				temp = current->data;   
 				current->data = current->next->data; 
 				current->next->data = temp; 
 				changes = true; 
 
 			}
-			current = current->next;
-			if (current == NULL) 
+			current = current->next; 
 			{
 				current = head;
 
@@ -151,7 +149,6 @@ void stack::print()
 
 			cout << n->data << endl;
 			n = n->next; 
-
 
 		}
 
