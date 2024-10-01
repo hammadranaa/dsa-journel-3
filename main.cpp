@@ -9,7 +9,7 @@ void main()
 
 	a.push(9); 
 	a.push(5); 
-	a.push(7);
+	a.push(7); 
 
 	a.print();
 
